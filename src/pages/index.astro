@@ -8,6 +8,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@components/Hero/Hero.astro";
 import Button from "@components/Button/Button.astro";
 import PostCard from "@components/PostCard/PostCard.astro";
+import Features from "@components/Specs/Features.astro"
 
 // utils
 import { getAllPosts, formatPosts } from "@js/blogUtils";
@@ -21,7 +22,10 @@ const recentPosts = formatPosts(posts, { limit: 3 });
 
 <BaseLayout title={siteData.title} description={siteData.description}>
 	<Hero />
+	
+
 	<div class="container mt-10">
+		<Features />
 		<!-- Recent blogs -->
 		<div class="mx-auto max-w-3xl md:mt-12">
 			<h2 class="h2 text-center">Recent Blog Posts</h2>

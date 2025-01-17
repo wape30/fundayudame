@@ -36,7 +36,7 @@ interface Props {
 								navData.map((navItem) =>
 									"dropdown" in navItem ? (
 										// non-mobile dropdown menu
-										<NavDropdown navItem={navItem} />
+										<NavDropdown navItem={navItem}/>
 									) : (
 										// normal nav link
 										<NavLink {navItem} />
