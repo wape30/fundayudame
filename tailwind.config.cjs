@@ -3,7 +3,9 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+				'./node_modules/flowbite/**/*.js'
+	],
 	theme: {
 		screens: {
 			xs: "400px",
@@ -58,5 +60,5 @@ module.exports = {
 			],
 		},
 	},
-	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"),require('flowbite/plugin')],
 };

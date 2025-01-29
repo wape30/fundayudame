@@ -24,15 +24,15 @@ const siteData: SiteDataProps = {
 	useViewTransitions: true,
 	// Your information!
 	author: {
-		name: "Cosmic Themes",
-		email: "creator@cosmicthemes.com",
-		twitter: "Cosmic_Themes",
+		name: "Wilson Caicedo",
+		email: "wape30@gmail.com",
+		twitter: "wincrox",
 	},
 
 	// default image for meta tags if the page doesn't have an image already
 	defaultImage: {
-		src: "/images/cosmic-themes-logo.jpg",
-		alt: "Blogsmith logo",
+		src: "/images/logo.png",
+		alt: "Fundayudame logo",
 	},
 };
 
