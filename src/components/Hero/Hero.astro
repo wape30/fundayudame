@@ -1,10 +1,14 @@
 ---
+import heroImage from "../../assets/images/hero.jpg"
+import patronesImage from "../../assets/images/patrones3.jpg"
+import { Image } from "astro:assets";
 import Button from "@components/Button/Button.astro";
 ---
 
 <section
 	id="hero"
-	class="relative mb-14 flex min-h-[60svh] w-full bg-gradient-to-b from-lime-200/10 from-10% via-lime-300/40 via-60% to-lime-600/60 pb-24"
+	style={{'--image-url': `url(${patronesImage.src})`}}
+	class="relative mb-14 flex min-h-[60svh] w-full bg-[image:var(--image-url)] bg-lime-200 bg-blend-multiply pb-24"
 >
 	<!-- hero items -->
 	<div class="mx-auto flex items-center pt-16">
@@ -30,3 +34,5 @@ import Button from "@components/Button/Button.astro";
 		</div>
 	</div>
 </section>
+
+

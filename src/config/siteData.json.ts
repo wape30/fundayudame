@@ -18,9 +18,9 @@ export interface SiteDataProps {
 const siteData: SiteDataProps = {
 	name: "Fundacion Ayudame a Ayudarme",
 	// Your website's title and description (meta fields)
-	title: "Fundacion de caridad para la reconstruccion social de Colombia",
+	title: "Fundacion Ayudame a Ayudarme",
 	description:
-		"Get your new blog website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
+		"Nuestra fundación nace del profundo deseo de crear un mundo más inclusivo y justo para todos, especialmente para los niños y niñas con discapacidad. Creemos que cada niño merece la oportunidad de desarrollar todo su potencial y vivir una vida plena.",
 	useViewTransitions: true,
 	// Your information!
 	author: {
