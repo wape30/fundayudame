@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+
+export interface Props {
+  imagenes: {
+    src: string | ImageMetadata;
+    alt: string;
+    width?: number;
+    height?: number;
+  }[];
+}
+
+const { imagenes } = Astro.props;
+---
+
+<div class="swiper-galeria">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {imagenes.map((imagen) => (
+        <div class="swiper-slide">
+          {typeof imagen.src === 'string' ? (
+            <img src={imagen.src} alt={imagen.alt} />
+          ) : (
+            <Image 
+              src={imagen.src} 
+              alt={imagen.alt} 
+              width={imagen.width || 800} 
+              height={imagen.height || 600}
+              quality={80}
+              format="jpg"
+              class="galeria-imagen"
+            />
+          )}
+        </div>
+      ))}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination } from 'swiper/modules';
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination],
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
+</script>
+
+<style>
+  .swiper-galeria {
+    margin: 2rem 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .swiper-slide img,
+  .swiper-slide :global(.galeria-imagen) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+</style> 

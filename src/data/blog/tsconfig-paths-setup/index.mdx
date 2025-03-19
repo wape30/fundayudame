@@ -1,158 +1,64 @@
 ---
-title: "How to Use TSConfig Path Aliases to Improve Your Code"
-description: Enable cleaner, more readable import statements with TSConfig path aliases. Learn how to set them up and improve your TypeScript code maintainability.
-pubDate: "Aug 14 2023"
-heroImage: "./tsconfig-path-setup.jpeg"
-authors: [web-reaper]
-categories: [productivity]
+title: "Campaña de Inicio de Clases: Apoyando la Educación en Barranquilla"
+description: La Fundación Ayudame brindó apoyo escolar a niños de comunidades vulnerables en Barranquilla, proporcionando útiles escolares y cubriendo gastos de matrícula para garantizar su acceso a la educación.
+pubDate: "Feb 15 2025"
+heroImage: "./imageblog2.webp"
+authors: [wincrox-dev]
+categories: [eventos, educacion]
 ---
+import SwiperGaleria from '../../../components/SwiperGaleria.astro';
 
-TSConfig path aliases are a powerful tool that can help you to improve the readability, maintainability, and error-proofing of your TypeScript code. This allows for easier to read clean code, and enables us to move files around without having to update import paths in every file.
+# Campaña de Inicio de Clases en Barranquilla
 
-_This is a huge time saver._
+En el marco de nuestro compromiso continuo con la educación, la Fundación Ayudame llevó a cabo una significativa campaña de apoyo escolar en una de las comunidades más vulnerables de Barranquilla. Esta iniciativa tuvo como objetivo principal asegurar que ningún niño se quedara sin la oportunidad de recibir educación debido a limitaciones económicas.
 
-## What Are Path Aliases?
+## Identificando la Necesidad
 
-The goal is to replace the following import statements:
+Al inicio del año escolar, muchas familias en la comunidad enfrentaban la difícil realidad de no poder costear los útiles escolares básicos ni los gastos de matrícula para sus hijos. Esta situación ponía en riesgo el futuro educativo de numerosos niños y niñas.
 
-```ts
-// relative import path
-import MyComponent from "../../../components/MyComponent";
-```
+Nuestro equipo realizó un diagnóstico de necesidades en colaboración con líderes comunitarios y escuelas locales para identificar a las familias que más requerían apoyo.
 
-with these import statements:
+## La Campaña en Acción
 
-```ts
-// alias import path
-import MyComponent from "@components/MyComponent";
-```
+La jornada se desarrolló en el corazón de la comunidad, donde instalamos un punto de distribución que rápidamente se llenó de sonrisas y esperanza. Durante esta campaña:
 
-We can do this with a `tsconfig.json` or `jsconfig.json` file. We will be using TypeScript in this post.
+- Entregamos más de 200 kits escolares completos incluyendo cuadernos, lápices, colores y demás útiles necesarios
+- Cubrimos los gastos de matrícula para 75 niños que corrían el riesgo de no poder iniciar el año escolar
+- Proporcionamos uniformes escolares a familias con recursos extremadamente limitados
+- Realizamos actividades recreativas y educativas para los niños y sus familias
 
-## How To Setup Path Aliases
+## Impacto en la Comunidad
 
-### Adding Path Aliases To Your TSConfig File
+El efecto de esta campaña va más allá de la simple entrega de materiales. Para muchas familias, representó un alivio económico significativo en momentos difíciles. Para los niños, significó la oportunidad de iniciar su año escolar con dignidad y con todas las herramientas necesarias para su aprendizaje.
 
-We need to update our `tsconfig.json` file to enable aliases. We will add a `paths` and `baseUrl` property to the `compilerOptions` object. Each path is relative to the `baseUrl`.
+María Gómez, madre de tres niños beneficiados, expresó: "Estaba realmente preocupada porque no podía comprar todos los útiles que necesitaban mis hijos. Gracias a la Fundación, ellos podrán concentrarse en estudiar sin sentirse diferentes a sus compañeros."
 
-This will tell TypeScript to replace the alias with the actual path when compiling the code.
+## Compromiso Continuo
 
-```json
-{
-	"compilerOptions": {
-		"baseUrl": ".", // root of your "paths" below. Required if "paths" is defined
-		"paths": {
-			"@components/*": ["src/components/*"] // enables us to use @components/MyComponent
-		}
-	}
-}
-```
+Esta campaña forma parte de nuestro programa continuo de apoyo a la educación. Estamos convencidos de que la educación es un derecho fundamental y una herramienta poderosa para romper el ciclo de la pobreza.
 
-### Using Path Aliases In Your Code
+Agradecemos a todos nuestros donantes y voluntarios que hicieron posible esta jornada. Cada contribución, grande o pequeña, ha tenido un impacto directo en el futuro de estos niños y niñas.
 
-Now in all of your source files, you can import components like this:
+## ¿Cómo Ayudar?
 
-```ts
-// Without path aliases
-import Hero from "../../../components/Hero";
-import Footer from "../../../components/Footer";
+Si deseas unirte a nuestros esfuerzos para futuras campañas educativas, puedes:
 
-// With path aliases
-import Hero from "@components/Hero";
-import Footer from "@components/Footer";
-```
+- Realizar una donación económica
+- Donar útiles escolares
+- Participar como voluntario en nuestras jornadas
+- Difundir nuestra labor en redes sociales
 
-<Admonition variant="info">
-	Frameworks like Astro and Next.js ship with built-in typescript support,
-	although you may have to create the file `tsconfig.json`. Consult your
-	framework's documentation for more information.
-</Admonition>
+Juntos podemos seguir transformando vidas a través de la educación.
 
-## Why Should I Do This?
-
-Let's say we have the following file structure:
-
-```
-.
-└── src/
-    ├── components/
-    │   ├── Hero.tsx
-    │   └── Footer.tsx
-    └── pages/
-        ├── index.tsx
-        └── solutions.tsx
-```
-
-### Annoying Relative Imports
-
-If we want to import `Hero.tsx` and `Footer.tsx` into `index.tsx` and `solutions.tsx`, we would need the following import statements:
-
-```ts
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-```
-
-### Refactoring Relative Imports
-
-Now lets say we want to refactor. We now have multiple "solutions" and want to have each on their own page, and have them under a `solutions` directory. The file structure now looks like:
-
-```
-.
-└── src/
-    ├── components/
-    │   ├── Hero.tsx
-    │   └── Footer.tsx
-    └── pages/
-        ├── index.tsx
-        └── solutions/
-            ├── solution.tsx
-            └── solution2.tsx
-```
-
-Now we have to update the import paths of `solution.tsx`:
-
-```ts
-import Hero from "../../components/Hero";
-import Footer from "../../components/Footer";
-```
-
-You can see how this makes refactoring more of a chore. We have to update the import paths in every file that imports these components. This is a huge time sink and can lead to bugs if you forget to update the import paths.
-
-### Alias Imports Version
-
-Alternatively, if from the start we were using aliases, we would not have to update any files using the components. This is far better for maintainability:
-
-```ts
-import Hero from "@components/Hero";
-import Footer from "@components/Footer";
-```
-
-<Admonition variant="info">
-	With this method, _every_ file that needs to import these components will
-	import them the same way. This makes it easier to move files around without
-	having to update import paths.
-</Admonition>
-
-## Additional Paths
-
-This can be extended to any number of path aliases. Some other potential ones you might use:
-
-```json
-{
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@config/*": ["src/data/*"],
-			"@js/*": ["src/js/*"],
-			"@layouts/*": ["src/layouts/*"],
-			"@components/*": ["src/components/*"],
-			"@assets/*": ["src/assets/*"]
-		}
-	}
-}
-```
-
-<Admonition variant="tip">
-	When updating `tsconfig.json`, you may need to restart your editor for the
-	changes to take effect.
-</Admonition>
+## Galería de Fotos
+<SwiperGaleria 
+  imagenes={[
+    { src: "/images/blog/tsconfig-paths-setup/campana1.jpg", alt: "Niños recibiendo útiles escolares" },
+    { src: "/images/blog/tsconfig-paths-setup/campana2.jpg", alt: "Entrega de kits escolares" },
+    { src: "/images/blog/tsconfig-paths-setup/campana3.jpg", alt: "Actividades recreativas" },
+    { src: "/images/blog/tsconfig-paths-setup/campana4.jpg", alt: "Voluntarios y familias" },
+    { src: "/images/blog/tsconfig-paths-setup/campana5.jpg", alt: "Comunidad participando" },
+    { src: "/images/blog/tsconfig-paths-setup/campana6.jpg", alt: "Niños con sus nuevos útiles" },
+    { src: "/images/blog/tsconfig-paths-setup/campana7.jpg", alt: "Clausura de la jornada" }
+  ]}
+/>

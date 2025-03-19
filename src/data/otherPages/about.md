@@ -1,49 +1,88 @@
 ---
-title: About Blogsmith
-description: All about Blogsmith! The best starter blog template for Astro.
+title: Sobre Fundación Ayudame
+description: Conoce nuestra misión, visión y el impacto que generamos en las comunidades vulnerables de Barranquilla.
 ---
 
-_Get your blog up and running in hours, not weeks._
+# Fundación Ayudame: Transformando Vidas en Barranquilla
 
-Blogsmith is the perfect way to showcase your writing and connect with your audience. It's built on Astro, a modern static site generator that's fast, lightweight, and SEO-friendly. And it uses Tailwind CSS, a powerful utility-first CSS framework that makes it easy to style your blog.
+En Fundación Ayudame creemos firmemente que cada niño merece una oportunidad, cada persona con discapacidad merece inclusión, y cada familia en situación de vulnerabilidad merece apoyo para salir adelante.
 
-This is the free version with limited features. You can [purchase the pro version](https://cosmicthemes.com/themes/blogsmith-pro/) for only ~~$79~~ $49! The pro version includes additional features such as:
+## Nuestra Misión
 
-- Full i18n capabilities with configuration script
-- Keystatic CMS integration
-- Multiple Hero sections
-- Multiple blog layouts, including a sidebar and table of contents
-- Contact form
-- Newsletter signup form
-- Tags pages (in addition to category pages)
-- Multiple card components and layouts
-- Related Posts
-- Share Buttons in blog posts
-- JsonLD schema for SEO
-- **All future updates**
-- and more!
+Trabajamos incansablemente para mejorar la calidad de vida de niños, niñas, adolescentes y personas con discapacidad en situación de vulnerabilidad en Barranquilla, mediante programas integrales de educación, salud, nutrición e inclusión social.
 
-## Features
+## Nuestra Visión
 
-- **Fast and lightweight:** This theme is built on Astro, which means it's blazing fast and uses minimal resources. Your blog will load quickly and smoothly, even on slow connections.
-- **Markdown Blog Posts:** Blogsmith leverages Astro Content Collections, allowing your to write your blog posts in markdown or mdx, with markdown frontmatter validation.
-- **Categories:** Blogsmith supports categories, allowing you to group your blog posts by topic. This makes it easier for readers to find what they're looking for.
-- **Multiple Authors:** Blogsmith supports multiple authors, allowing you to add multiple authors, or use different authors for blog posts.
-- **SEO-friendly:** Blogsmith is designed to be SEO-friendly, so your blog posts will rank well in search results. It includes OG tags, Twitter cards, and other metadata that will help search engines understand what your blog is about.
-- **Responsive:** This theme is responsive, so it will look great on any device. Your blog will be easy to read and navigate, no matter what screen size it's viewed on.
-- **Optimized:** This theme is optimized for performance, so your blog will load quickly and smoothly. Images are optimized using Astro's build in optimization, and files are compressed when building.
-- **Tailwind CSS:** This theme uses Tailwind CSS, which makes it easy to style your blog. Just choose from the pre-defined utility classes and you're good to go.
-- **Flexible layout:** The theme comes with a flexible layout that you can customize to fit your needs. You can change the colors, fonts, and spacing to create a blog that reflects your unique style.
-- **Easy to use:** This theme is easy to use, with data and config files for you to configure important items on the website. You can get started with just a few clicks.
+Aspiramos a ser reconocidos como una organización líder en la transformación social de Barranquilla, construyendo comunidades más equitativas donde todos los niños y personas con discapacidad tengan acceso a oportunidades dignas para desarrollar su pleno potencial.
 
-## Benefits
+## Nuestros Valores
 
-- **Get more traffic:** A well-designed blog can help you attract more traffic to your website. This theme can help you do that by making your blog look professional and inviting.
-- **Build an audience:** A blog is a great way to build an audience and connect with people who are interested in what you have to say. This theme can help you do that by making it easy to share your content on social media and other platforms.
-- **Promote your business:** If you have a business, a blog can be a great way to promote your products or services. This theme can help you do that by making it easy to add calls to action to your blog posts.
+- **Compromiso**: Dedicación total a nuestra misión social
+- **Transparencia**: Gestión clara y responsable de todos nuestros recursos
+- **Respeto**: Reconocimiento de la dignidad inherente a cada persona
+- **Solidaridad**: Trabajo colaborativo con las comunidades
+- **Inclusión**: Valoración de la diversidad en todas sus formas
 
-## Get started
+## Nuestras Áreas de Acción
 
-To get started with this theme, you'll need to open the folder you download, run `npm install`, then run `npm run dev` to see the theme in your browser. Edit details in the site files to update whatever you need, and ship!
+### Educación Inclusiva
 
-I hope this theme helps you create a beautiful and professional blog that you can be proud of.
+Promovemos el acceso a una educación de calidad mediante:
+- Entrega de útiles escolares y uniformes
+- Becas educativas para estudiantes destacados
+- Programas de refuerzo escolar
+- Talleres de formación para docentes en educación inclusiva
+
+### Atención a la Discapacidad
+
+Desarrollamos programas específicos para personas con discapacidad:
+- Terapias especializadas
+- Entrega de ayudas técnicas (sillas de ruedas, bastones, etc.)
+- Actividades de inclusión social y laboral
+- Apoyo psicosocial a familias
+
+### Nutrición y Salud
+
+Velamos por el bienestar físico de nuestra población beneficiaria:
+- Comedores comunitarios
+- Jornadas de salud preventiva
+- Formación en hábitos saludables
+- Suplementos nutricionales para niños en riesgo
+
+### Desarrollo Comunitario
+
+Fortalecemos el tejido social de las comunidades:
+- Formación de líderes comunitarios
+- Proyectos productivos para familias
+- Mejoramiento de espacios comunitarios
+- Actividades culturales y deportivas
+
+## Nuestro Impacto
+
+En nuestros años de trabajo hemos logrado:
+
+- Beneficiar a más de 5,000 niños y niñas con programas educativos
+- Entregar más de 200 ayudas técnicas a personas con discapacidad
+- Establecer 3 comedores comunitarios permanentes
+- Formar a 150 líderes comunitarios
+- Implementar 25 proyectos productivos familiares
+
+## Cómo Puedes Ayudar
+
+Tu apoyo es fundamental para continuar nuestra labor. Puedes contribuir de diversas formas:
+
+- **Donaciones económicas**: Cada peso cuenta para transformar vidas
+- **Voluntariado**: Comparte tu tiempo y habilidades
+- **Donaciones en especie**: Alimentos, ropa, juguetes, útiles escolares
+- **Alianzas corporativas**: Si representas a una empresa, podemos crear programas de responsabilidad social conjuntos
+
+## Contáctanos
+
+**Dirección**: Calle 45 #50-30, Barrio El Prado, Barranquilla
+**Teléfono**: (605) 123-4567
+**Correo**: contacto@fundacionayudame.org
+**Horario de atención**: Lunes a viernes de 8:00 am a 5:00 pm
+
+---
+
+"Juntos construimos esperanza para quienes más lo necesitan"
